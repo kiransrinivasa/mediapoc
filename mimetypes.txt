@@ -1,0 +1,40 @@
+image/weather
+
+image/news-item
+
+"development": {
+  "username": "Egg3Mstr",
+  "password": "3Eggpass",
+  "database": "ebb3db",
+  "host": "egg3db.cyrphvbkdu3f.us-west-2.rds.amazonaws.com",
+  "port": 5432,
+  "dialect": "postgres",
+  "operatorsAliases": "Sequelize.Op"
+}
+
+{
+  "id": 4,
+  "title": "Iranian protests: World is watching response, US warns",
+  "image_icon": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRWUK0Oa6dkLGiY4XVgZnHGPkfH-v547LGCG0a6q5WwuzIDwNknw_URfpr6Oh4toteqnpV2Rh3yVxM",
+  "image": "https://ichef-1.bbci.co.uk/news/624/cpsprodpb/3AFD/production/_99410151_iranprotest.jpg",
+  "description": "The US says \"the world is watching\" how Iranian authorities respond to anti-government protests that have broken out in several cities.",
+  "category": "top",
+  "source": "BBC News",
+  "zone_id": 1,
+  "active": true,
+  "createdAt": "2017-12-31T20:57:03.582Z",
+  "updatedAt": "2017-12-31T20:57:03.582Z"
+}
+{
+  "id": 3,
+  "title": "A police officer fatally shot a man while responding to an emergency call now called a 'swatting' prank",
+  "image_icon": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTupL-hkWF0a-f4_QPEJFSCcKHcYZ3oWwy2ACXOty3CKc7kxwjaQZIdCQx-XxAEugeAwxUbYY8RozI",
+  "image": "https://www.washingtonpost.com/resizer/ezZ-0D25ik0wxeGPNyLQUkg3QK4=/480x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/MWWZW56PZI5JRNPCFUYOMOV7VE.jpg",
+  "description": "A police officer in Wichita fatally shot a man while responding to an emergency call that authorities now say was a tragic and senseless prank. The 28-year-old man, whom officials did not immediately identify, was killed around 6:20 p.m. Thursday after police responded to a report that there had been a shooting and hostages taken at the house, Deputy Wichita Police Chief Troy Livingston said at a Friday news conference. “Due to the actions of a prankster, we have an innocent victim,” Livingston said, calling it a case of “swatting.”",
+  "category": "top",
+  "source": "Washington Post",
+  "zone_id": 1,
+  "active": true,
+  "createdAt": "2017-12-31T20:57:03.582Z",
+  "updatedAt": "2017-12-31T20:57:03.582Z"
+}

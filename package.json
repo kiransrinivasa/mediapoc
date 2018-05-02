@@ -1,0 +1,30 @@
+{
+  "name": "myNodeTab",
+  "version": "0.0.1",
+  "description": "A real-time Display Media System with NodeJs, Socket.io, Postgres and Vue.js",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "./node_modules/.bin/nodemon ./bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "socketio",
+    "vue.js",
+    "real-time",
+    "analytics"
+  ],
+  "author": "BVK Media",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.16.2",
+    "pg": "^6.2.4",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.1.0",
+    "socket.io": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.6"
+  }
+}
