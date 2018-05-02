@@ -1,0 +1,23 @@
+{
+  "mydevelopment": {
+    "username": "root",
+    "password": "root",
+    "database": "tabDemo",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": "Sequelize.Op"
+  },
+  "development": {
+    "username": "Egg3Mstr",
+    "password": "Egg3pass",
+    "database": "egg3DB",
+    "host": "egg3db.cfznfx3p7khc.us-east-1.rds.amazonaws.com",
+    "port": 5432,
+    "dialect": "postgres",
+    "operatorsAliases": "Sequelize.Op"
+  },
+  "host": "localhost",
+  "port": "8000",
+  "dashboardEndpoint": "/dashboard"
+}

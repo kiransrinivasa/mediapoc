@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BVK Media Tab - ABC Saloon Inc.</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<!-- <body onload="startTime()"> -->
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">BVK Media Tab<span class="coligo"> | ABC Saloon Inc.</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="app">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="well">
+              <!-- <h1 class="dash-red">{{ activeUsers }} <i class="glyphicon glyphicon-user"></i></h1> -->
+              <h1 class="dash-red" id="txtClock"></h1>
+              <h3 id="txtDay" style="color: #00a1ff;"></h3>
+          </div>
+        </div>
+
+        <div class="col-xs-9">
+
+          <h2 class="sub-header">Server Sent the following</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+               {{name}} : {{file}} : {{type}}
+              </tbody>
+            </table>
+          </div>
+          <div id = 'video' v-if= "type.indexOf('video') != -1">
+            <video width="400" autoplay loop>
+              <source v-bind:src="file" v-bind:type="type">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div id = 'image' v-if= "type.indexOf('image') != -1">
+            <img v-bind:src="file" alt="Image not found" height="400" width="400">
+          </div>
+<!--
+          <h2 class="sub-header">Active Pages</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <td>Page URL</td>
+                <td>Active Users</td>
+              </thead>
+              <tbody>
+                <tr v-for="(page, count) in pages">
+                  <td>{{ page }}</td>
+                  <td>{{ count }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="sub-header">Referrals</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <td>Referring Site</td>
+                <td>Active Users</td>
+              </thead>
+              <tbody>
+                <tr v-for="(referringSite, count) in referrers">
+                  <td>{{ referringSite }}</td>
+                  <td>{{ count }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+-->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vue.1.0.17.js"></script>
+  <script src="js/radialIndicator.js"></script>
+  <script src="js/socket.io.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script type="text/javascript">
+
+     var radialObj = radialIndicator('#txtClock', {
+        radius: 60,
+        barWidth: 5,
+        barColor: '#00a1ff',
+        minValue: 0,
+        maxValue: 60,
+        fontWeight: 'normal',
+        roundCorner: true,
+        format: function (value) {
+            var date = new Date();
+            day = date.toDateString();
+            var hrs = date.getHours();
+            var mins = date.getMinutes();
+            if (hrs.length < 2)
+            {
+              hrs = '0' + hrs;
+            }
+            if (mins.length < 2)
+            {
+              mins = '0' + mins;
+            }
+            return hrs + ':' + mins;
+        }
+    });
+
+    setInterval(
+      function ()
+      {
+        radialObj.value(new Date().getSeconds() + 1);
+        var d = new Date();
+        var n = d.toDateString();
+        document.getElementById("txtDay").innerHTML = n;
+      }, 1000);
+
+  </script>
+</body>
+
+</html>
